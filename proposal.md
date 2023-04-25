@@ -13,6 +13,7 @@ This project aims to create an interactive 3D visualization of atmospheric scatt
 # Goals and Deliverables
 
 ## Goals:
+
 - Sky color gradient: Implement a smooth gradient demonstrating the color changes of the sky due to atmospheric scattering at various times of the day.
 
 - The Tyndall effect: Visualize the scattering of sunlight by small particles in the air, which causes the sky to appear blue.
