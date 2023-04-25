@@ -2,11 +2,11 @@
 title: Real-Time Atmospheric Scattering and Procedural Planets Generations
 ---
 
-![Put a nice picture here](images/demo.jpg){width="300px"}
+![Put a nice picture here](images/atmosphere_from_planet.jpg){width="300px"}
 
 # Title and Summary
 
-Provide us a descriptive title and 1-2 sentences summarizing your project.
+This project aims to implement an atmospheric scattering algorithm and procedural planet generation in real-time, resulting in a visually stunning and realistic representation of outdoor environments and celestial bodies. 
 
 # Goals and Deliverables
 
