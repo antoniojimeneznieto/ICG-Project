@@ -1458,3 +1458,51 @@ AssetImportParameters requested are different than current active one (requested
   custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 1999.845355 seconds.
+  path: Assets/AtmosphericScatter/Stars/8k_stars_milky_way.jpg
+  artifactKey: Guid(52903bbd3ec444f6c8a69506daa25a9c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AtmosphericScatter/Stars/8k_stars_milky_way.jpg using Guid(52903bbd3ec444f6c8a69506daa25a9c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '747f4db4caba6241f227476bf0a418df') in 0.594227 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 17.538185 seconds.
+  path: Assets/AtmosphericScatter/Sun/8k_sun.jpg
+  artifactKey: Guid(b4d7a44ac1fbe4354b8d20fe8101d210) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AtmosphericScatter/Sun/8k_sun.jpg using Guid(b4d7a44ac1fbe4354b8d20fe8101d210) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '551e17553665deb9895bd2ffd00bc090') in 0.021400 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 10.902899 seconds.
+  path: Assets/AtmosphericScatter/Moon
+  artifactKey: Guid(ceb2990b4a24a4691ae38bc02266d1bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AtmosphericScatter/Moon using Guid(ceb2990b4a24a4691ae38bc02266d1bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '85672a78c13b62a576cf6c6ed76c2b75') in 0.001169 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 38.965408 seconds.
+  path: Assets/AtmosphericScatter/Moon/8k_moon.jpg
+  artifactKey: Guid(9f542ff3726d4491f8fc01f0a2c91516) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AtmosphericScatter/Moon/8k_moon.jpg using Guid(9f542ff3726d4491f8fc01f0a2c91516) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fec05a1a1f79829bb8ab66c53892ef69') in 0.019941 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 100.913120 seconds.
+  path: Assets/AtmosphericScatter/Sun/New Material.mat
+  artifactKey: Guid(de9147fa58555466c9f45268b8060c9a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AtmosphericScatter/Sun/New Material.mat using Guid(de9147fa58555466c9f45268b8060c9a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '48e49f0c0a78c24e74a454f39567cfbb') in 0.172705 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 441.978903 seconds.
+  path: Assets/AtmosphericScatter/Moon/New Material.mat
+  artifactKey: Guid(7ba09115656114cd6a8d58f5597b8b0b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AtmosphericScatter/Moon/New Material.mat using Guid(7ba09115656114cd6a8d58f5597b8b0b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1fedccf548c71306bd3b29804a4843f1') in 0.046267 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
