@@ -1,1 +1,0 @@
-Temp/ScriptUpdater/325267976/1213900663_CelestialBodyShading.cs => Assets/AtmosphericScatter/Stars/CelestialBodyShading.cs
