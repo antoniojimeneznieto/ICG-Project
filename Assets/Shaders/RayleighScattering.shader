@@ -1,14 +1,22 @@
 Shader "Custom/RayleighScattering" {
     Properties {
         _MainTex ("Main Texture (Day)", 2D) = "white" {}
+
         _NightTex ("Main Texture (Night)", 2D) = "black" {}
-        _ScatteringCoeff ("Scattering Coefficient", Range(0, 1)) = 0.1
-        _AtmosphereHeight ("Atmosphere Height", Range(0, 1)) = 0.1
-        _RayleighScaleHeight ("Rayleigh Scale Height", Range(0, 1)) = 0.1
-        _PlanetRadius ("Planet Radius", Range(0, 10000)) = 6371
+        [HDR] _NightColor ("Night Color", Color) = (1,1,1,0.5)
+
+		_AtmosphereFactor ("Atmosphere Factor", Float) = 1
+        _AtmosphereHeight ("Atmosphere Height (km)", Range(0, 10)) = 8
+        _AtmosphereColor ("Atmosphere Color", Color) = (1,1,1,1)
+
+        _PlanetRadius ("Planet Radius (km)", Range(0, 10000)) = 6371
         _PlanetCenter ("Planet Center", Vector) = (0, 0, 0)
         _EmissionIntensity ("Emission Intensity", Range(0, 5)) = 1
         _EmissionRange ("Emission Range", Range(0, 1)) = 0.2
+
+        _ScatteringCoeff ("Scattering Coefficient", Range(0, 1)) = 0.1
+        _RayleighScaleHeight ("Rayleigh Scale Height", Range(0, 1)) = 0.1
+
     }
 
     SubShader {
@@ -19,20 +27,29 @@ Shader "Custom/RayleighScattering" {
         #pragma surface surf Lambert
 
         sampler2D _MainTex;
-        sampler2D _NightTex;
-        float _ScatteringCoeff;
-        float _AtmosphereHeight;
-        float _RayleighScaleHeight;
-        float _PlanetRadius;
-        float3 _PlanetCenter;
-        float _EmissionIntensity;
-        float _EmissionRange;
 
         struct Input {
             float2 uv_MainTex;
             float3 worldPos;
             float3 worldNormal;
         };
+
+        sampler2D _NightTex;
+        fixed4 _NightColor;
+
+        float _AtmosphereFactor;
+        float _AtmosphereHeight;
+        float _AtmosphereColor;
+
+        float _PlanetRadius;
+        float3 _PlanetCenter;
+        float _EmissionIntensity;
+        float _EmissionRange;
+
+
+        float _ScatteringCoeff;
+        float _RayleighScaleHeight;
+
 
         void surf (Input IN, inout SurfaceOutput o) {
             float3 worldPos = IN.worldPos;
@@ -71,7 +88,55 @@ Shader "Custom/RayleighScattering" {
             float emissionMask = smoothstep(0.5 - _EmissionRange, 0.5 + _EmissionRange, dot(emissionColor, float3(1, 1, 0)));
             o.Emission = emissionColor * emissionMask * (1.0 - dayNightBlend);
         }
+
+
+        bool rayIntersect(float3 origin, float3 direction, 
+                          float3 center, float radius, 
+                          out float firstIntersectionTime,
+                          out float secondIntersectionTime) {
+            float3 diff = center - origin;
+            float dotProduct = dot(diff, direction);
+
+            float radiusSquared = radius * radius;
+            float orthogonalDistanceSquared = dot(diff, diff) - dotProduct * dotProduct;
+
+            if (orthogonalDistanceSquared > radiusSquared)
+            {
+                return false;
+            }
+
+            float intersectionDistance = sqrt(radiusSquared - orthogonalDistanceSquared);
+            firstIntersectionTime = dotProduct - intersectionDistance;
+            secondIntersectionTime = dotProduct + intersectionDistance;
+            return true;
+        }
+
+
         ENDCG
+
+        // Tags { "RenderType"="Transparent" "Queue"="Transparent"}
+		// LOD 100
+		
+		// CGPROGRAM
+		// #pragma surface surf Scattering
+
+		// #pragma target 3.0
+
+        // struct Input {
+        //     float2 uv_MainTex;
+        //     float3 worldPos;
+        //     float3 worldNormal;
+        // };
+
+        // // Compute intersection between ray of origin O and direction D with 
+        // // sphere of center C, radius R
+        // // Output the two solution of the equation in A and B
+        // // (First weeks of classes)
+
+        
+
+
+        // ENDCG
     }
     FallBack "Diffuse"
 }
