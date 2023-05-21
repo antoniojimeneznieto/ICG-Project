@@ -1,30 +1,23 @@
-Unity Editor version:    2022.2.18f1 (5ebc6493a86f)
-Branch:                  2022.2/staging
-Build type:              Release
-Batch mode:              YES
-macOS version:           Version 13.2.1 (Build 22D68)
-Darwin version:          22.3.0
-Architecture:            x86_64
-Running under Rosetta:   NO
-Available memory:        16384 MB
 Using pre-set license
-Pro License: YES
+Built from '2022.2/staging' branch; Version is '2022.2.19f1 (765657fe9343) revision 7755351'; Using compiler version '192829333'; Build Type 'Release'
+OS: 'Windows 11  (10.0.22621) 64bit Professional' Language: 'fr' Physical Memory: 32501 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
 
 COMMAND LINE ARGUMENTS:
-/Applications/Unity/Hub/Editor/2022.2.18f1/Unity.app/Contents/MacOS/Unity
+C:\Program Files\Unity\Hub\Editor\2022.2.19f1\Editor\Unity.exe
 -adb2
 -batchMode
 -noUpm
 -name
 AssetImportWorker0
 -projectPath
-/Users/anjim1/Desktop/EPFL/BA6/CS-341/proposal_template/ICG-Proposal
+C:/Users/jules/Documents/ICG-Project
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-56590
-Successfully changed project path to: /Users/anjim1/Desktop/EPFL/BA6/CS-341/proposal_template/ICG-Proposal
-/Users/anjim1/Desktop/EPFL/BA6/CS-341/proposal_template/ICG-Proposal
+50905
+Successfully changed project path to: C:/Users/jules/Documents/ICG-Project
+C:/Users/jules/Documents/ICG-Project
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
     "memorysetup-bucket-allocator-granularity=16"
     "memorysetup-bucket-allocator-bucket-count=8"
@@ -54,61 +47,61 @@ Successfully changed project path to: /Users/anjim1/Desktop/EPFL/BA6/CS-341/prop
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [140704293865088] Host "[IP] 128.179.161.222 [Port] 0 [Flags] 2 [Guid] 4191265411 [EditorId] 4191265411 [Version] 1048832 [Id] OSXEditor(0,tsf-460-wpa-1-222.epfl.ch) [Debug] 1 [PackageName] OSXEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+Player connection [12136] Host "[IP] 10.30.1.143 [Port] 0 [Flags] 2 [Guid] 2999235013 [EditorId] 2999235013 [Version] 1048832 [Id] WindowsEditor(7,Jules-Desktop) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
 
-Player connection [140704293865088] Host "[IP] 128.179.161.222 [Port] 0 [Flags] 2 [Guid] 4191265411 [EditorId] 4191265411 [Version] 1048832 [Id] OSXEditor(0,tsf-460-wpa-1-222.epfl.ch) [Debug] 1 [PackageName] OSXEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [12136] Host "[IP] 10.30.1.143 [Port] 0 [Flags] 2 [Guid] 2999235013 [EditorId] 2999235013 [Version] 1048832 [Id] WindowsEditor(7,Jules-Desktop) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
 
-Refreshing native plugins compatible for Editor in 9.66 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 4.00 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Initialize engine version: 2022.2.18f1 (5ebc6493a86f)
-[Subsystems] Discovering subsystems at path /Applications/Unity/Hub/Editor/2022.2.18f1/Unity.app/Contents/Resources/UnitySubsystems
-[Subsystems] Discovering subsystems at path /Users/anjim1/Desktop/EPFL/BA6/CS-341/proposal_template/ICG-Proposal/Assets
+Initialize engine version: 2022.2.19f1 (765657fe9343)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2022.2.19f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/jules/Documents/ICG-Project/Assets
 GfxDevice: creating device client; threaded=0; jobified=0
-Color LCD preferred device: AMD Radeon Pro 555X (high power)
-Metal devices available: 2
-0: AMD Radeon Pro 555X (high power)
-1: Intel(R) UHD Graphics 630 (low power)
-Using device AMD Radeon Pro 555X (high power)
-Initializing Metal device caps: AMD Radeon Pro 555X
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce RTX 4080 (ID=0x2704)
+    Vendor:   NVIDIA
+    VRAM:     16064 MB
+    Driver:   31.0.15.3179
 Initialize mono
-Mono path[0] = '/Applications/Unity/Hub/Editor/2022.2.18f1/Unity.app/Contents/Managed'
-Mono path[1] = '/Applications/Unity/Hub/Editor/2022.2.18f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/unityjit-macos'
-Mono config path = '/Applications/Unity/Hub/Editor/2022.2.18f1/Unity.app/Contents/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56976
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2022.2.19f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2022.2.19f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/2022.2.19f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56952
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
-Register platform support module: /Applications/Unity/Hub/Editor/2022.2.18f1/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll
-Registered in 0.002649 seconds.
-- Loaded All Assemblies, in  0.715 seconds
-Native extension for OSXStandalone target not found
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.2.19f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.003281 seconds.
+- Loaded All Assemblies, in  0.159 seconds
+Native extension for WindowsStandalone target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.608 seconds
+- Finished resetting the current domain, in  0.134 seconds
 Domain Reload Profiling:
-	ReloadAssembly (398ms)
-		BeginReloadAssembly (172ms)
+	ReloadAssembly (97ms)
+		BeginReloadAssembly (45ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (1ms)
+			CreateAndSetChildDomain (0ms)
 		LoadAllAssembliesAndSetupDomain (0ms)
-			LoadAssemblies (171ms)
+			LoadAssemblies (43ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (311ms)
-				TypeCache.Initialize (310ms)
-					TypeCache.ScanAssembly (307ms)
-				ResolveRequiredComponents (1ms)
+			SetupTypeCache (59ms)
+				TypeCache.Initialize (58ms)
+					TypeCache.ScanAssembly (57ms)
+				ResolveRequiredComponents (0ms)
 		FinalizeReload (0ms)
 			ReleaseScriptCaches (0ms)
 			RebuildScriptCaches (0ms)
-			SetupLoadedEditorAssemblies (462ms)
+			SetupLoadedEditorAssemblies (105ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (16ms)
-				SetLoadedEditorAssemblies (19ms)
+				InitializePlatformSupportModulesInManaged (5ms)
+				SetLoadedEditorAssemblies (4ms)
 				RefreshPlugins (0ms)
-				BeforeProcessingInitializeOnLoad (2ms)
-				ProcessInitializeOnLoadAttributes (321ms)
-				ProcessInitializeOnLoadMethodAttributes (104ms)
+				BeforeProcessingInitializeOnLoad (0ms)
+				ProcessInitializeOnLoadAttributes (71ms)
+				ProcessInitializeOnLoadMethodAttributes (25ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
@@ -116,151 +109,328 @@ Domain Reload Profiling:
 ========================================================================
 Worker process is ready to serve import requests
 Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image /Users/anjim1/Desktop/EPFL/BA6/CS-341/proposal_template/ICG-Proposal/Library/PackageCache/com.unity.visualscripting@1.8.0/Editor/VisualScripting.Core/Dependencies/YamlDotNet/Unity.VisualScripting.YamlDotNet.dll
-Symbol file LoadedFromMemory doesn't match image /Users/anjim1/Desktop/EPFL/BA6/CS-341/proposal_template/ICG-Proposal/Library/PackageCache/com.unity.visualscripting@1.8.0/Editor/VisualScripting.Core/Dependencies/DotNetZip/Unity.VisualScripting.IonicZip.dll
-- Loaded All Assemblies, in  1.557 seconds
-Refreshing native plugins compatible for Editor in 2.24 ms, found 2 plugins.
-Native extension for OSXStandalone target not found
+Symbol file LoadedFromMemory doesn't match image C:\Users\jules\Documents\ICG-Project\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\jules\Documents\ICG-Project\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+- Loaded All Assemblies, in  0.382 seconds
+Refreshing native plugins compatible for Editor in 1.37 ms, found 3 plugins.
+Native extension for WindowsStandalone target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  1.102 seconds
+- Finished resetting the current domain, in  0.257 seconds
 Domain Reload Profiling:
-	ReloadAssembly (460ms)
-		BeginReloadAssembly (264ms)
+	ReloadAssembly (111ms)
+		BeginReloadAssembly (65ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (14ms)
+			DisableScriptedObjects (3ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (55ms)
-		LoadAllAssembliesAndSetupDomain (1096ms)
-			LoadAssemblies (488ms)
+			CreateAndSetChildDomain (13ms)
+		LoadAllAssembliesAndSetupDomain (270ms)
+			LoadAssemblies (135ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (725ms)
-				TypeCache.Initialize (683ms)
-					TypeCache.ScanAssembly (676ms)
-				ResolveRequiredComponents (10ms)
+			SetupTypeCache (164ms)
+				TypeCache.Initialize (154ms)
+					TypeCache.ScanAssembly (151ms)
+				ResolveRequiredComponents (2ms)
 		FinalizeReload (0ms)
 			ReleaseScriptCaches (0ms)
 			RebuildScriptCaches (0ms)
-			SetupLoadedEditorAssemblies (771ms)
+			SetupLoadedEditorAssemblies (182ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (9ms)
-				SetLoadedEditorAssemblies (7ms)
+				InitializePlatformSupportModulesInManaged (3ms)
+				SetLoadedEditorAssemblies (2ms)
 				RefreshPlugins (0ms)
-				BeforeProcessingInitializeOnLoad (105ms)
-				ProcessInitializeOnLoadAttributes (604ms)
-				ProcessInitializeOnLoadMethodAttributes (43ms)
+				BeforeProcessingInitializeOnLoad (31ms)
+				ProcessInitializeOnLoadAttributes (134ms)
+				ProcessInitializeOnLoadMethodAttributes (10ms)
 				AfterProcessingInitializeOnLoad (3ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (10ms)
-Launching external process: /Applications/Unity/Hub/Editor/2022.2.18f1/Unity.app/Contents/Tools/UnityShaderCompiler
-Launched and connected shader compiler UnityShaderCompiler after 0.15 seconds
-Refreshing native plugins compatible for Editor in 2.59 ms, found 2 plugins.
+			AwakeInstancesAfterBackupRestoration (4ms)
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.03 seconds
+Refreshing native plugins compatible for Editor in 1.72 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3113 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 33 unused Assets / (100.9 KB). Loaded Objects now: 3582.
-Memory consumption went from 116.9 MB to 116.8 MB.
-Total: 5.790869 ms (FindLiveObjects: 0.339764 ms CreateObjectMapping: 0.308605 ms MarkObjects: 4.906303 ms  DeleteObjects: 0.234813 ms)
+Unloading 3115 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 33 unused Assets / (128.3 KB). Loaded Objects now: 3584.
+Memory consumption went from 113.9 MB to 113.8 MB.
+Total: 2.047100 ms (FindLiveObjects: 0.162300 ms CreateObjectMapping: 0.051000 ms MarkObjects: 1.739400 ms  DeleteObjects: 0.094000 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
   custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
   custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:AudioImporter_EditorPlatform: 3918e3fc78b5a79bad01e8451be0beb8 -> 
-  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
   custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 655423.345039 seconds.
+  path: Assets/Shaders/AtmosphereTesting.shader
+  artifactKey: Guid(1b1e840d7fdc8974db04cde31813e7c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/AtmosphereTesting.shader using Guid(1b1e840d7fdc8974db04cde31813e7c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '082ace7a46b1b38014696d6de6b34972') in 0.006585 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 130.352333 seconds.
+  path: Assets/Scenes/Solar System.unity
+  artifactKey: Guid(cde4f68708fd44baa8472b44321b3bda) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Solar System.unity using Guid(cde4f68708fd44baa8472b44321b3bda) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '40ff6f03c22c7ca503b475225742bfcb') in 0.006814 seconds
+Number of updated asset objects reloaded before import = 1
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 77.008404 seconds.
+  path: Assets/AtmosphericScatter/Moon/8k_moon.jpg
+  artifactKey: Guid(9f542ff3726d4491f8fc01f0a2c91516) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AtmosphericScatter/Moon/8k_moon.jpg using Guid(9f542ff3726d4491f8fc01f0a2c91516) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7ae05042f92fc60c181ca378c76e36c8') in 0.026593 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
 ========================================================================
 Received Prepare
 Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image /Users/anjim1/Desktop/EPFL/BA6/CS-341/proposal_template/ICG-Proposal/Library/PackageCache/com.unity.visualscripting@1.8.0/Editor/VisualScripting.Core/Dependencies/YamlDotNet/Unity.VisualScripting.YamlDotNet.dll
-Symbol file LoadedFromMemory doesn't match image /Users/anjim1/Desktop/EPFL/BA6/CS-341/proposal_template/ICG-Proposal/Library/PackageCache/com.unity.visualscripting@1.8.0/Editor/VisualScripting.Core/Dependencies/DotNetZip/Unity.VisualScripting.IonicZip.dll
-- Loaded All Assemblies, in  1.354 seconds
-Refreshing native plugins compatible for Editor in 2.35 ms, found 2 plugins.
-Native extension for OSXStandalone target not found
+Symbol file LoadedFromMemory doesn't match image C:\Users\jules\Documents\ICG-Project\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\jules\Documents\ICG-Project\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+- Loaded All Assemblies, in  0.339 seconds
+Refreshing native plugins compatible for Editor in 1.62 ms, found 3 plugins.
+Native extension for WindowsStandalone target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  1.166 seconds
+- Finished resetting the current domain, in  0.450 seconds
 Domain Reload Profiling:
-	ReloadAssembly (412ms)
-		BeginReloadAssembly (263ms)
+	ReloadAssembly (117ms)
+		BeginReloadAssembly (79ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (12ms)
+			DisableScriptedObjects (3ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (91ms)
-		LoadAllAssembliesAndSetupDomain (941ms)
-			LoadAssemblies (450ms)
+			CreateAndSetChildDomain (24ms)
+		LoadAllAssembliesAndSetupDomain (221ms)
+			LoadAssemblies (121ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (599ms)
-				TypeCache.Initialize (590ms)
-					TypeCache.ScanAssembly (582ms)
-				ResolveRequiredComponents (9ms)
+			SetupTypeCache (128ms)
+				TypeCache.Initialize (126ms)
+					TypeCache.ScanAssembly (123ms)
+				ResolveRequiredComponents (2ms)
 		FinalizeReload (0ms)
 			ReleaseScriptCaches (0ms)
 			RebuildScriptCaches (0ms)
-			SetupLoadedEditorAssemblies (613ms)
+			SetupLoadedEditorAssemblies (162ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (7ms)
-				SetLoadedEditorAssemblies (6ms)
+				InitializePlatformSupportModulesInManaged (3ms)
+				SetLoadedEditorAssemblies (3ms)
 				RefreshPlugins (0ms)
-				BeforeProcessingInitializeOnLoad (95ms)
-				ProcessInitializeOnLoadAttributes (465ms)
-				ProcessInitializeOnLoadMethodAttributes (38ms)
+				BeforeProcessingInitializeOnLoad (32ms)
+				ProcessInitializeOnLoadAttributes (112ms)
+				ProcessInitializeOnLoadMethodAttributes (9ms)
 				AfterProcessingInitializeOnLoad (3ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (8ms)
-Refreshing native plugins compatible for Editor in 2.34 ms, found 2 plugins.
+			AwakeInstancesAfterBackupRestoration (4ms)
+Refreshing native plugins compatible for Editor in 1.66 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3106 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 24 unused Assets / (78.9 KB). Loaded Objects now: 3585.
-Memory consumption went from 119.0 MB to 118.9 MB.
-Total: 5.304748 ms (FindLiveObjects: 0.319449 ms CreateObjectMapping: 0.274575 ms MarkObjects: 4.540236 ms  DeleteObjects: 0.169208 ms)
+Unloading 3105 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 24 unused Assets / (90.7 KB). Loaded Objects now: 3590.
+Memory consumption went from 112.3 MB to 112.3 MB.
+Total: 1.731200 ms (FindLiveObjects: 0.144300 ms CreateObjectMapping: 0.040200 ms MarkObjects: 1.473100 ms  DeleteObjects: 0.073100 ms)
 
-Prepare: number of updated asset objects reloaded= 0
+Prepare: number of updated asset objects reloaded= 1
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
   custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
   custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:AudioImporter_EditorPlatform: 3918e3fc78b5a79bad01e8451be0beb8 -> 
-  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
   custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 409801.811581 seconds.
-  path: Assets/Shaders
-  artifactKey: Guid(861035861095f894da3254ab13f43b34) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Shaders using Guid(861035861095f894da3254ab13f43b34) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bcd21df383e775a664fbee907175a35a') in 0.003264 seconds
+  Time since last request: 72.859279 seconds.
+  path: Assets/Shaders/EarthDayNight.shader
+  artifactKey: Guid(3d85fbc7304060541a29578a6ef4d4e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/EarthDayNight.shader using Guid(3d85fbc7304060541a29578a6ef4d4e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '13ae2cb64cb90926ecfa6c0ab94a8142') in 0.005324 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 0
 ========================================================================
 Received Import Request.
-  Time since last request: 1.084332 seconds.
-  path: Assets/Shaders/RayleighScattering.shader
-  artifactKey: Guid(9c1ebc3eff2dd794482e89df2c1a15cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Shaders/RayleighScattering.shader using Guid(9c1ebc3eff2dd794482e89df2c1a15cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '19bc0ae5699fdd3d0f346f0991362abc') in 0.016483 seconds
+  Time since last request: 288.542768 seconds.
+  path: Assets/Shaders/EarthDayNight.shader
+  artifactKey: Guid(3d85fbc7304060541a29578a6ef4d4e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/EarthDayNight.shader using Guid(3d85fbc7304060541a29578a6ef4d4e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3e794a85e33b7c8df2b05a51d96f2783') in 0.000602 seconds
+Number of updated asset objects reloaded before import = 1
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 29.473805 seconds.
+  path: Assets/Shaders/EarthDayNight.shader
+  artifactKey: Guid(3d85fbc7304060541a29578a6ef4d4e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/EarthDayNight.shader using Guid(3d85fbc7304060541a29578a6ef4d4e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6be6fdc32850c90cf3a4eeddacb55f80') in 0.000528 seconds
+Number of updated asset objects reloaded before import = 1
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 257.865623 seconds.
+  path: Assets/Shaders/EarthDayNight.shader
+  artifactKey: Guid(3d85fbc7304060541a29578a6ef4d4e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/EarthDayNight.shader using Guid(3d85fbc7304060541a29578a6ef4d4e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd6e2cd494b9f98583af40a6e33543881') in 0.000569 seconds
+Number of updated asset objects reloaded before import = 1
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 8.913605 seconds.
+  path: Assets/Shaders/EarthDayNight.shader
+  artifactKey: Guid(3d85fbc7304060541a29578a6ef4d4e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/EarthDayNight.shader using Guid(3d85fbc7304060541a29578a6ef4d4e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '438fc2cf6d23d651eda019912168f062') in 0.000724 seconds
+Number of updated asset objects reloaded before import = 1
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 301.235595 seconds.
+  path: Assets/Shaders/EarthDayNight.shader
+  artifactKey: Guid(3d85fbc7304060541a29578a6ef4d4e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/EarthDayNight.shader using Guid(3d85fbc7304060541a29578a6ef4d4e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6a5917f504c5d7df29dd24de7f679021') in 0.000593 seconds
+Number of updated asset objects reloaded before import = 1
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 50.266084 seconds.
+  path: Assets/Shaders/EarthDayNight.shader
+  artifactKey: Guid(3d85fbc7304060541a29578a6ef4d4e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/EarthDayNight.shader using Guid(3d85fbc7304060541a29578a6ef4d4e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fe223319b4c953cc8e0a147ffc2964bc') in 0.000481 seconds
+Number of updated asset objects reloaded before import = 1
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 4.309469 seconds.
+  path: Assets/Shaders/EarthDayNight.shader
+  artifactKey: Guid(3d85fbc7304060541a29578a6ef4d4e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/EarthDayNight.shader using Guid(3d85fbc7304060541a29578a6ef4d4e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7674355fea9c307a55c05b14ab02329c') in 0.000529 seconds
+Number of updated asset objects reloaded before import = 1
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 81.773415 seconds.
+  path: Assets/Shaders/EarthDayNight.shader
+  artifactKey: Guid(3d85fbc7304060541a29578a6ef4d4e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/EarthDayNight.shader using Guid(3d85fbc7304060541a29578a6ef4d4e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '48e085db5632dac36ad017f6324a4368') in 0.000518 seconds
+Number of updated asset objects reloaded before import = 1
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 43.229280 seconds.
+  path: Assets/Shaders/DayNight.shader
+  artifactKey: Guid(448d67a3c5bed6d45b5727bd816795bd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/DayNight.shader using Guid(448d67a3c5bed6d45b5727bd816795bd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cfd05e04db687f81d4bab38b0d2b1a47') in 0.001163 seconds
+Number of updated asset objects reloaded before import = 1
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 8.908682 seconds.
+  path: Assets/Shaders/DayNight.shader
+  artifactKey: Guid(448d67a3c5bed6d45b5727bd816795bd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/DayNight.shader using Guid(448d67a3c5bed6d45b5727bd816795bd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '397982894be19d688c39490f905e405e') in 0.000929 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
+Number of asset objects unloaded after import = 1
 ========================================================================
 Received Import Request.
-  Time since last request: 182.990017 seconds.
-  path: Assets/Shaders/RayleighScattering.shader
-  artifactKey: Guid(9c1ebc3eff2dd794482e89df2c1a15cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Shaders/RayleighScattering.shader using Guid(9c1ebc3eff2dd794482e89df2c1a15cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f7805b3b8963ed10fc04bdb9ca8dabb1') in 0.001337 seconds
-Number of updated asset objects reloaded before import = 1
-Number of asset objects unloaded after import = 0
+  Time since last request: 53.921334 seconds.
+  path: Assets/Shaders/DayNight.shader
+  artifactKey: Guid(448d67a3c5bed6d45b5727bd816795bd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/DayNight.shader using Guid(448d67a3c5bed6d45b5727bd816795bd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5fede82dee1b82e5ac9e0844a1649969') in 0.001260 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
 ========================================================================
 Received Import Request.
-  Time since last request: 41.683423 seconds.
-  path: Assets/Procedural Planets Generation System
-  artifactKey: Guid(0a12beee989944025b61c93b45e6ec1e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Procedural Planets Generation System using Guid(0a12beee989944025b61c93b45e6ec1e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fa70fd0f6969b0a51caf14a289f92159') in 0.001002 seconds
-Number of updated asset objects reloaded before import = 1
-Number of asset objects unloaded after import = 0
+  Time since last request: 8.222060 seconds.
+  path: Assets/Shaders/DayNight.shader
+  artifactKey: Guid(448d67a3c5bed6d45b5727bd816795bd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/DayNight.shader using Guid(448d67a3c5bed6d45b5727bd816795bd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8837ff6b43d2d736992fa13f1b1a8786') in 0.001392 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 137.905899 seconds.
+  path: Assets/Shaders/DayNightShader.shader
+  artifactKey: Guid(fb8c546fa85ab49488e5134c2a7748b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/DayNightShader.shader using Guid(fb8c546fa85ab49488e5134c2a7748b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e0fc656194a7689c99e30022c544e65e') in 0.001235 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 56.450635 seconds.
+  path: Assets/Shaders/DayNightShader.shader
+  artifactKey: Guid(fb8c546fa85ab49488e5134c2a7748b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/DayNightShader.shader using Guid(fb8c546fa85ab49488e5134c2a7748b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c819e079d3906459a8543c0bda2372cf') in 0.000890 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 215.001255 seconds.
+  path: Assets/Shaders/DayNightShader.shader
+  artifactKey: Guid(fb8c546fa85ab49488e5134c2a7748b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/DayNightShader.shader using Guid(fb8c546fa85ab49488e5134c2a7748b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aa85110c2fcac4ee3f5634a7e79c58a3') in 0.000925 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 20.256678 seconds.
+  path: Assets/Shaders/DayNightShader.shader
+  artifactKey: Guid(fb8c546fa85ab49488e5134c2a7748b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/DayNightShader.shader using Guid(fb8c546fa85ab49488e5134c2a7748b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '54ca8716443a24ba000208bbed79c178') in 0.000871 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 60.538357 seconds.
+  path: Assets/Shaders/DayNightShader.shader
+  artifactKey: Guid(fb8c546fa85ab49488e5134c2a7748b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/DayNightShader.shader using Guid(fb8c546fa85ab49488e5134c2a7748b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '83a2d3926999199d5fcfca76949c0581') in 0.000902 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 193.841065 seconds.
+  path: Assets/Shaders/DayNightShader.shader
+  artifactKey: Guid(fb8c546fa85ab49488e5134c2a7748b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/DayNightShader.shader using Guid(fb8c546fa85ab49488e5134c2a7748b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7e7f4c133ff339ef99bbad47b0e7583f') in 0.001017 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 299.557946 seconds.
+  path: Assets/Shaders/DayNightShader.shader
+  artifactKey: Guid(fb8c546fa85ab49488e5134c2a7748b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/DayNightShader.shader using Guid(fb8c546fa85ab49488e5134c2a7748b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9ba28a2af099c33b744fdbf4d464c3bd') in 0.001447 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 5.772897 seconds.
+  path: Assets/Shaders/DayNightShader.shader
+  artifactKey: Guid(fb8c546fa85ab49488e5134c2a7748b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/DayNightShader.shader using Guid(fb8c546fa85ab49488e5134c2a7748b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '53a48555894355804e558dfca94c261f') in 0.001295 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 24.374637 seconds.
+  path: Assets/Shaders/DayNightShader.shader
+  artifactKey: Guid(fb8c546fa85ab49488e5134c2a7748b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/DayNightShader.shader using Guid(fb8c546fa85ab49488e5134c2a7748b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5a22e646569058b759cc76e2091d9437') in 0.001310 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 142.826779 seconds.
+  path: Assets/Shaders/DayNightShader.shader
+  artifactKey: Guid(fb8c546fa85ab49488e5134c2a7748b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/DayNightShader.shader using Guid(fb8c546fa85ab49488e5134c2a7748b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f5e17b63bbdda045740e97b6410e0d49') in 0.001251 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
