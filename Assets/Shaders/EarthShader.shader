@@ -2,7 +2,6 @@ Shader "Custom/EarthShader" {
     Properties {
         _DayTex ("Daytime Texture", 2D) = "white" {}
         _NightTex ("Nighttime Texture", 2D) = "white" {}
-        _NormalMap ("Normal Map", 2D) = "bump" {}
         _LightBrightness ("Light Brightness", Range(0, 3)) = 1.0
         _EmissionThreshold ("Emission Threshold", Range(0, 1)) = 0.5
     }
@@ -18,20 +17,18 @@ Shader "Custom/EarthShader" {
                 float4 vertex : POSITION;
                 float2 uv : TEXCOORD0;
                 float3 normal : NORMAL;
-                float4 tangent : TANGENT;
             };
 
             struct v2f {
                 float4 vertex : SV_POSITION;
                 float2 uv : TEXCOORD0;
-                float3 lightDir : TEXCOORD1;
-                float3 tangentSpaceLightDir : TEXCOORD2;
-                float3 tangentSpaceViewDir : TEXCOORD3;
+                float3 worldNormal : TEXCOORD1;
+                float3 lightDir : TEXCOORD2;
+                float3 worldViewDir : TEXCOORD3;
             };
 
             sampler2D _DayTex;
             sampler2D _NightTex;
-            sampler2D _NormalMap;
             float _LightBrightness;
             float _EmissionThreshold;
 
@@ -39,26 +36,17 @@ Shader "Custom/EarthShader" {
                 v2f o;
                 o.vertex = UnityObjectToClipPos(v.vertex);
                 o.uv = v.uv;
-                float3 worldNormal = UnityObjectToWorldNormal(v.normal);
-                float3 worldTangent = UnityObjectToWorldDir(v.tangent.xyz);
-                float3 worldBinormal = cross(worldNormal, worldTangent) * v.tangent.w;
+                o.worldNormal = UnityObjectToWorldNormal(v.normal);
                 float3 worldPos = mul(unity_ObjectToWorld, v.vertex).xyz;
-                float3 lightDir = normalize(_WorldSpaceLightPos0.xyz - worldPos);
-                o.lightDir = lightDir;
-                o.tangentSpaceLightDir = float3(dot(lightDir, worldTangent), dot(lightDir, worldBinormal), dot(lightDir, worldNormal));
-                float3 viewDir = normalize(UnityWorldSpaceViewDir(v.vertex));
-                o.tangentSpaceViewDir = float3(dot(viewDir, worldTangent), dot(viewDir, worldBinormal), dot(viewDir, worldNormal));
+                o.lightDir = normalize(_WorldSpaceLightPos0.xyz - worldPos);
+                o.worldViewDir = UnityWorldSpaceViewDir(v.vertex);
                 return o;
             }
 
             fixed4 frag (v2f i) : SV_Target {
-                float3 normal = normalize(tex2D(_NormalMap, i.uv).rgb * 2 - 1);
                 fixed4 dayColor = tex2D(_DayTex, i.uv);
                 fixed4 nightColor = tex2D(_NightTex, i.uv);
-                float NdotL = max(0, dot(normal, i.tangentSpaceLightDir));
-                float3 viewDir = normalize(-i.tangentSpaceViewDir);
-                float3 halfDir = normalize(i.tangentSpaceLightDir + viewDir);
-                float NdotH = max(0, dot(normal, halfDir));
+                float NdotL = max(0, dot(i.worldNormal, i.lightDir));
                 float factor = smoothstep(0, 0.3, NdotL);
                 fixed4 finalColor = lerp(nightColor, dayColor, factor);
 

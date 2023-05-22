@@ -9,9 +9,12 @@ public class SpaceshipController : MonoBehaviour
     public float minFOV = 60.0f; // Minimum field of view
     public float maxFOV = 90.0f; // Maximum field of view
     public float maxSpeedFOV = 20.0f; // The speed at which the FOV will be at its maximum
+    public float maxSpeed = 10.0f; // The maximum speed
+    public float acceleration = 0.2f; // The acceleration rate
 
     private Rigidbody rb;
     private Camera spaceshipCamera; // Reference to the spaceship's camera
+    private Vector3 currentVelocity = Vector3.zero; // The current velocity
 
     private void Start()
     {
@@ -19,7 +22,7 @@ public class SpaceshipController : MonoBehaviour
         rb = GetComponent<Rigidbody>();
 
         // Get the camera component
-        spaceshipCamera = GetComponent<Camera>();
+        spaceshipCamera = GetComponentInChildren<Camera>();
 
         // Hide the cursor and lock it to the center of the screen
         Cursor.visible = false;
@@ -35,29 +38,33 @@ public class SpaceshipController : MonoBehaviour
         // Rotate the spaceship according to the mouse movement
         transform.Rotate(-verticalRotation, horizontalRotation, 0);
 
+        Vector3 desiredVelocity = Vector3.zero;
+
         // Get the inputs for moving forwards and backwards
         if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))
         {
-            // Apply a force in the direction the spaceship is facing
-            rb.AddForce(transform.forward * thrust);
+            desiredVelocity += transform.forward;
         }
         if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow))
         {
-            // Apply a force in the opposite direction the spaceship is facing
-            rb.AddForce(-transform.forward * thrust);
+            desiredVelocity -= transform.forward;
         }
 
         // Get the inputs for moving left and right
         if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
         {
-            // Apply a force to the left
-            rb.AddForce(-transform.right * thrust);
+            desiredVelocity -= transform.right;
         }
         if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
         {
-            // Apply a force to the right
-            rb.AddForce(transform.right * thrust);
+            desiredVelocity += transform.right;
         }
+
+        desiredVelocity = desiredVelocity.normalized * maxSpeed;
+        currentVelocity = Vector3.Lerp(currentVelocity, desiredVelocity, acceleration);
+
+        // Apply the calculated velocity
+        rb.velocity = currentVelocity;
 
         // Adjust the field of view based on the spaceship's speed
         float speed = rb.velocity.magnitude;
@@ -71,4 +78,3 @@ public class SpaceshipController : MonoBehaviour
         Debug.Log("Collided with " + collision.gameObject.name);
     }
 }
-
