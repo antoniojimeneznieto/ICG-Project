@@ -40,13 +40,13 @@
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\2022.2.19f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\PlanetShaderController.cs" />
-     <Compile Include="Assets\PlanetSpin.cs" />
-     <Compile Include="Assets\FollowPlanet.cs" />
      <Compile Include="Assets\AtmosphericScatter\Planets\SunMovement.cs" />
-     <Compile Include="Assets\Gravity.cs" />
+     <Compile Include="Assets\Scripts\SpaceShip.cs" />
+     <Compile Include="Assets\Scripts\PlanetMovement.cs" />
+     <Compile Include="Assets\Scripts\FollowPlanet.cs" />
      <None Include="Assets\AtmosphericScatter\Shaders\Scattering.shader" />
      <None Include="Assets\Shaders\DayNight.shader" />
+     <None Include="Assets\Shaders\Atmosphere.shader" />
      <None Include="Assets\Shaders\AtmosphereTesting.shader" />
      <None Include="Assets\Shaders\RayleighScattering.shader" />
     <Reference Include="UnityEngine">
