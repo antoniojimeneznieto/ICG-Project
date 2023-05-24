@@ -77,7 +77,6 @@ namespace UnityEditor.ShaderGraph
         {
             if (m_OnModified != null)
                 m_OnModified(this, scope);
-            NodeValidation.HandleValidationExtensions(this);
         }
 
         public string name
@@ -739,7 +738,6 @@ namespace UnityEditor.ShaderGraph
         {
             if ((sgVersion < latestVersion) && (dismissedUpdateVersion < latestVersion))
                 owner.messageManager?.AddOrAppendError(owner, objectId, new ShaderMessage("There is a newer version of this node available. Inspect node for details.", Rendering.ShaderCompilerMessageSeverity.Warning));
-            NodeValidation.HandleValidationExtensions(this);
         }
 
         public virtual bool canCutNode => true;
