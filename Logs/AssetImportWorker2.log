@@ -317,3 +317,11 @@ Received Import Request.
 Start importing Assets/Materials/planet2_land.mat using Guid(881b8309073d84369b792bb91b9bce6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5fe8e659211762787fbe4386f673a3d5') in 0.020015 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 224.566241 seconds.
+  path: Assets/Models/planet2.fbx
+  artifactKey: Guid(10e50024ae5f54b83917400c3ac027b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/planet2.fbx using Guid(10e50024ae5f54b83917400c3ac027b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3a7244e1511d6e9ece42a1f79e22038d') in 0.171107 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 15
