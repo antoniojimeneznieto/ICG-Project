@@ -172,39 +172,38 @@
       <img src="images/earth_emissive_night.png" width="500" alt="" style="margin-right: 20px;" />
     </div>
 
-  </ul>
-  <h2 id="Planets Movements">Planets Movement</h2>
+<ul>
+  <h2 id="Planet Movements">Planet Movements</h2>
   <li>
-    <p>For gravity we simply applied the equation of the universal graviation from Newton:</p>
+    <p>To simulate gravity, we use Newton's Universal Law of Gravitation:</p>
     <div style="text-align: center;">
       \( F = G \frac{{m_1 \cdot m_2}}{{r^2}} \)
     </div>
-    <p>This equation is applied in the <code>ApplyGravity()</code> function. Here, we calculate the direction and
-      magnitude of the gravitational force and apply it as a force on the Rigidbody of our planet.</p>
+    <p>This equation is applied in the <code>ApplyGravity()</code> function. The direction and
+      magnitude of the gravitational force are calculated and applied to the Rigidbody of the planet.</p>
 
-    <p>We use some simplifications since we don't really want the other planets to affect
-      the movement of each other. Since we're only interested in the interaction between the sun
-      and a planet, we can neglect the mass of the other planet compared to the sun.
-    </p>
+    <p>We simplify this model by assuming that the gravitational interaction is only significant between the sun
+      and the individual planet. This allows us to overlook the relatively minor effects of the planets on each other's movements.</p>
+  </li>
 
   <li>
-    <p>Other than that, we put an option to control the eccentricity of the orbit. This eccentricity value adjusts the
-      initial orbital speed in the <code>SetInitialOrbitalVelocity()</code> function, allowing for non-circular orbits.
+    <p>Furthermore, we have implemented an option to adjust the eccentricity of the orbit. This eccentricity value is used in the
+      <code>SetInitialOrbitalVelocity()</code> function to set the initial speed of the planet, allowing for non-circular (elliptical) orbits.
     </p>
   </li>
 
   <li>
-    <p>Moreover, there's another option to automatically choose a stable orbit for the planet if possible. This is done
-      by
-      setting the initial velocity of the planet such that the gravitational force is equal to the centripetal force
+    <p>We also have an option that automatically sets the planet into a stable orbit, if possible. This is accomplished
+      by setting the initial velocity of the planet such that the gravitational pull from the sun is balanced by the centripetal force
       required for a circular orbit.</p>
   </li>
 
   <li>
-    <p>Lastly, the rotation of the planet is managed in the <code>Start()</code> function, where we set an angular
-      velocity to the Rigidbody corresponding to the specified rotation speed.</p>
+    <p>Finally, the rotation of the planet around its axis is set up in the <code>Start()</code> function. Here, we assign an angular
+      velocity to the planet's Rigidbody based on the specified rotational speed.</p>
   </li>
-  </li>
+</ul>
+
 
   </ul>
   <h2 id="Flight Simulator">Flight Simulator</h2>
