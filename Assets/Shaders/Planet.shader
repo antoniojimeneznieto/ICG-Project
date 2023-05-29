@@ -238,7 +238,7 @@ Shader "CelestialBody/Planet"
 
 			float3 viewRayOrigin = space_position;
 			float3 viewRayDirection = -viewDir;
-			float3 sunDirection = gi.light.dir;	
+			float3 sunDirection = normalize((float3(0, 0, 0) - mul(unity_ObjectToWorld, float4(0, 0, 0, 1))).xyz);
 
 			float2 tA; // Atmosphere intersection time
 			float2 tP; // Planet intersection time
