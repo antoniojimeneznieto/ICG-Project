@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: EarthMaterial
-  m_Shader: {fileID: 4800000, guid: a2e097b93cbd922479166eae7dc6bba6, type: 3}
+  m_Shader: {fileID: 4800000, guid: 55fe31003e59ae9449fdc312df9b20a1, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -113,7 +113,7 @@ Material:
     - _InScattering: 8
     - _LightBrightness: 3
     - _LightIntensity: 22
-    - _LightSamples: 20
+    - _LightSamples: 100
     - _Metallic: 0
     - _MieAnisotropy: -0.758
     - _MieScaleHeight: 1200
@@ -142,18 +142,23 @@ Material:
     - _StencilOp: 0
     - _StencilReadMask: 255
     - _StencilWriteMask: 255
-    - _SunIntensity: 22
+    - _SunIntensity: 10
     - _UVSec: 0
     - _UseUIAlphaClip: 0
-    - _ViewSamples: 64
+    - _ViewSamples: 50
     - _ZWrite: 1
     - _bodyRadius: 6371000
+    - _space_atmosphereHeight: 60000
+    - _space_planetRadius: 6371000
+    - _space_rayleighScaleHeight: 8000
+    - _world_planetRadius: 0.52
     m_Colors:
     - _AtmosphColor: {r: 1, g: 1, b: 1, a: 1}
     - _AtmosphereColor: {r: 0.8862745, g: 0.20392156, b: 0.79826355, a: 1}
     - _ClipRect: {r: -32767, g: -32767, b: 32767, a: 32767}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _LightColor: {r: 1, g: 1, b: 1, a: 1}
     - _LightDir: {r: 0, g: 0, b: 1, a: 1}
     - _NightColor: {r: 1, g: 1, b: 1, a: 0.5}
     - _PlanetCenter: {r: -2.2087607, g: 0, b: -10.182783, a: 0}
@@ -161,4 +166,5 @@ Material:
     - _RayScatteringCoefficient: {r: 0.0000058, g: 10, b: 0.0000331, a: 0}
     - _ScatteringCoeff: {r: 0.000005804543, g: 0.000013562912, b: 0.000030265906, a: 0}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
+    - _space_rayleighScatteringCoefficient: {r: 0.0000058, g: 0.0000135, b: 0.0000331, a: 0}
   m_BuildTextureStacks: []

@@ -44,7 +44,8 @@
      <Compile Include="Assets\Scripts\PlanetMovement.cs" />
      <Compile Include="Assets\Scripts\FollowPlanet.cs" />
      <None Include="Assets\Shaders\EarthShader.shader" />
-     <None Include="Assets\Shaders\AtmosphereTesting.shader" />
+     <None Include="Assets\Shaders\Planet.shader" />
+     <None Include="Assets\Shaders\Atmosphere.shader" />
     <Reference Include="UnityEngine">
         <HintPath>C:\Program Files\Unity\Hub\Editor\2022.2.19f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
     </Reference>
