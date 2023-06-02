@@ -18,6 +18,9 @@ Shader "CelestialBody/Atmosphere"
 		_space_atmosphereHeight ("Atmosphere radius in meters", Float) = 60000
 		_space_rayleighScatteringCoefficient("Rayleigh scattering coefficient", Vector) = (0.0000058, 0.0000135, 0.0000331, 0)
 		_space_rayleighScaleHeight("Rayleigh scale height in meters", Float) = 8000	
+		_space_mieScatteringCoefficient("Rayleigh scattering coefficient", Float) = 0.0021
+		_space_mieAnisotropy ("Mie scattering direction", Range(-1,1)) = 0.758
+		_space_mieScaleHeight("Mie scale height in meters", Float) = 1200
 
 		// world_ -> variable is in unity units 
 		_world_planetRadius("Planet radius in units", Float) = 6.371		
@@ -89,7 +92,10 @@ Shader "CelestialBody/Atmosphere"
 		float _space_planetRadius;
 		float _space_atmosphereHeight;
 		float space_atmosphereRadius;
-		float3 space_position;		
+		float3 space_position;
+		float _space_mieScatteringCoefficient;
+		float _space_mieAnisotropy;
+		float _space_mieScaleHeight;		
 
 		// world_ -> in unity units
 		float3 world_planetCenter;
@@ -131,8 +137,8 @@ Shader "CelestialBody/Atmosphere"
 		 * @param height: height in meters
 		 * @return The local density
 		*/
-		float localDensity(float height) {
-            return exp(-height / _space_rayleighScaleHeight);
+		float localDensity(float height, float scaleHeight) {
+            return exp(-height / scaleHeight);
         }
 		
 		/*
@@ -144,6 +150,14 @@ Shader "CelestialBody/Atmosphere"
             return 3.0 / (16.0 * PI) * (1.0 + cosTheta * cosTheta);
         }
 
+		float miePhaseFunction(float cosTheta) {
+			return (3.0 / (8.0 * PI)) * 
+			((1.0 - _space_mieAnisotropy * _space_mieAnisotropy) * (1. + cosTheta * cosTheta)) / 
+			(pow(1.0 + _space_mieAnisotropy * _space_mieAnisotropy - 2.0 * _space_mieAnisotropy * cosTheta * cosTheta, 1.5) * 
+				(2.0 + _space_mieAnisotropy * _space_mieAnisotropy)
+			);
+		}
+
 		/*
 		 * Compute the in-scattering for a given point P inside the atmosphere
 		 * @param P:            point in the atmosphere
@@ -151,12 +165,13 @@ Shader "CelestialBody/Atmosphere"
 		 * @out   opticalDepth: optical depth of the light ray traveling from planet's atmosphere edge to P
 		 * @return true if the light ray does not intersect the planet
 		*/
-		bool computeInScattering(float3 P, float3 sunDirection, out float opticalDepth) {
+		bool computeInScattering(float3 P, float3 sunDirection, out float opticalDepthRayleigh, out float opticalDepthMie) {
 
 			float2 t;
 			raySphereIntersection(P, sunDirection, space_planetCenter, space_atmosphereRadius, t);
 
-			opticalDepth = 0;
+			opticalDepthRayleigh = 0;
+			opticalDepthMie = 0;
 
 			float stepSize = distance(P, t.y) / (float) (_LightSamples);
 			float3 X = P + sunDirection * stepSize * 0.5; // We sample in the middle of the segment
@@ -165,7 +180,8 @@ Shader "CelestialBody/Atmosphere"
 				float height = distance(space_planetCenter, X) - _space_planetRadius;
 				if (height < 0) { return false; } // check if X is inside the planet
 
-				opticalDepth += localDensity(height) * stepSize;
+				opticalDepthRayleigh += localDensity(height, _space_rayleighScaleHeight) * stepSize;
+				opticalDepthMie += localDensity(height,      _space_mieScaleHeight) * stepSize;
 
 				X += sunDirection * i * stepSize;
 				}
@@ -204,7 +220,9 @@ Shader "CelestialBody/Atmosphere"
 			}
 
 			float3 rayleighScattering = float3(0,0,0);
-			float opticalDepth = 0;
+			float mieScattering = 0;
+			float opticalDepthRayleigh = 0;
+			float opticalDepthMie = 0;
 			float stepSize = (t.y-t.x) / (float) (_ViewSamples);
 
 			float3 Pa = viewRayOrigin + viewRayDirection * t.x;
@@ -214,23 +232,33 @@ Shader "CelestialBody/Atmosphere"
 
 				float height = distance(P, space_planetCenter) - _space_planetRadius;
 
-				float lightRayOpticalDepth = 0;
-				float viewRayOpticalDepth = 0;
+				float lightRayOpticalDepthRayleigh = 0;
+				float viewRayOpticalDepthRayleigh = 0;
+
+				float lightRayOpticalDepthMie = 0;
+				float viewRayOpticalDepthMie = 0;
 			
-				viewRayOpticalDepth = localDensity(height) * stepSize;
-				opticalDepth += viewRayOpticalDepth;
+				viewRayOpticalDepthRayleigh = localDensity(height, _space_rayleighScaleHeight) * stepSize;
+				viewRayOpticalDepthMie      = localDensity(height, 	_space_mieScaleHeight) * stepSize;
 
-				if (computeInScattering(P, sunDirection, lightRayOpticalDepth)) {
-					float3 attenuation = exp(-(opticalDepth + lightRayOpticalDepth) * _space_rayleighScatteringCoefficient);
+				opticalDepthRayleigh += viewRayOpticalDepthRayleigh;
+				opticalDepthMie      += viewRayOpticalDepthMie;
 
-					rayleighScattering += viewRayOpticalDepth * attenuation;
+				if (computeInScattering(P, sunDirection, lightRayOpticalDepthRayleigh, lightRayOpticalDepthMie)) {
+					float3 attenuation = exp(-(opticalDepthRayleigh + lightRayOpticalDepthRayleigh) * _space_rayleighScatteringCoefficient
+											 -(opticalDepthMie      + lightRayOpticalDepthMie)      * _space_mieScatteringCoefficient);
+
+					rayleighScattering += viewRayOpticalDepthRayleigh * attenuation;
+					mieScattering      += viewRayOpticalDepthMie      * attenuation;
 				}
 				P += viewRayDirection * stepSize;
 			}
 
 			float rayleighPhase = rayleighPhaseFunction(dot(-viewRayDirection, sunDirection));
+			float miePhase = miePhaseFunction(dot(-viewRayDirection, sunDirection));
 
-			float3 scattering = rayleighPhase * _space_rayleighScatteringCoefficient * rayleighScattering;
+			float3 scattering = rayleighPhase    * _space_rayleighScatteringCoefficient * rayleighScattering
+							  + miePhase         * _space_mieScatteringCoefficient      * mieScattering;
 			scattering *= _SunIntensity;
 
 			fixed4 color = _LightColor;
